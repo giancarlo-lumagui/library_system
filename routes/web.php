@@ -13,5 +13,6 @@ Route::post('/login', [UserController::class, 'login'])->name('login');
 
 
 // util routes
-
 Route::get('/utilities/users', [UserController::class, 'showUsers']);
+
+Route::post('/users/register', [UserController::class, 'register'])->name('users');

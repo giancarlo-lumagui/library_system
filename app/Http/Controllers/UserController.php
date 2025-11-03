@@ -13,4 +13,23 @@ class UserController extends Controller
     public function showUsers(){
         return view('utilities.users');
     }
+
+    public function register(Request $request){
+        $request->validate([
+            'name' => 'required|min:3|max:30',
+            'role' => 'required',
+            'password' => 'required'
+        ]);
+
+        User::create([
+            'name' => $request->name,
+            'role' => $request->role,
+            'password' => Hash::make($request->password)
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Account created successfully'
+        ]);
+    }
 }

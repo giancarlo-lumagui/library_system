@@ -1,5 +1,6 @@
 @extends('layouts.default')
 
+
 @section('aside')
     @include('layouts.sidebar')
 @endsection
@@ -16,11 +17,12 @@
             <thead>
                 <tr>
                     <th>Username</th>
+                    <th>Password</th>
                     <th>Role</th>
                     <th>Actions</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="userList">
                 <tr>
 
                 </tr>
@@ -38,7 +40,7 @@
                     <button class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="">
+                    <form id="formData" action="#">
                         @csrf
                         <div class="input-group mb-3">
                             <span class="input-group-text">
@@ -62,13 +64,16 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-outline-success">Submit</button>
+                            <button type="submit" class="btn btn-outline-success">Submit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    @vite('resources/js/utilities/users.js')
+
 @endsection
 
 @section('footer')
