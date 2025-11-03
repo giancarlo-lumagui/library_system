@@ -1,0 +1,21 @@
+.sidebar {
+    width: 12.5rem;
+    background-color: #343a40;
+    color: white;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+.sidebar a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    color: white;
+    background-color: #495057;
+}
+.sidebar .nav-link {
+    padding: 10px 15px;
+}
+.sidebar .collapse a {
+    padding-left: 35px;
+}
