@@ -13,6 +13,8 @@ Route::post('/login', [UserController::class, 'login'])->name('login');
 
 
 // util routes
-Route::get('/utilities/users', [UserController::class, 'showUsers']);
-
+Route::get('/users/show', [UserController::class, 'show']);
+Route::get('/users/users', [UserController::class, 'showUsers']);
 Route::post('/users/register', [UserController::class, 'register'])->name('users');
+Route::delete('/users/{deleteId}', [UserController::class, 'destroy']);
+Route::put('/users/{editId}', [UserController::class, 'update']);

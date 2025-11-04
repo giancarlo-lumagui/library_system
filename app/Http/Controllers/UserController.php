@@ -32,4 +32,34 @@ class UserController extends Controller
             'message' => 'Account created successfully'
         ]);
     }
+
+    public function show(){
+        $users = User::all();
+        return response()->json([
+            'success' => true,
+            'users' => $users,
+        ]);
+    }
+
+    public function update(Request $request, $id){
+        $user = User::findOrFail($id);
+        $user->update([
+            'name' => $request->name,
+            'role' => $request->role
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'User updated successfully'
+        ]);
+    }
+
+    public function destroy($id){
+        $user = User::findOrFail($id);
+        $user->delete();
+        return response()->json([
+            'success' => true,
+            'message' => 'User deleted successfully'
+        ]);
+    }
 }
