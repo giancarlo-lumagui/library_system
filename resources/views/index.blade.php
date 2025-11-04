@@ -25,11 +25,6 @@
             <div class="my-4">
                 <button class="btn btn-outline-danger mt-3 w-100">Login</button>
             </div>
-            <div class="my-4 d-flex flex-column">
-                <sub><a href="">Forgot password?</a></sub> <br>
-                <sub>Contact registrar 0923-541-2312</sub>
-            </div>
-
         </form>
     </div>
 @endsection

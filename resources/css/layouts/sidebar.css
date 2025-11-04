@@ -1,21 +1,43 @@
 .sidebar {
     width: 13.5rem;
-    background-color: #343a40;
+    background-color: #403434;
     color: white;
     flex-shrink: 0;
     font-size: 1.2rem;
 }
+
 .sidebar a {
     color: #adb5bd;
     text-decoration: none;
 }
+
 .sidebar a:hover {
     color: white;
     background-color: #495057;
-}a
-.sidebar .nav-link {    
+}
+
+a .sidebar .nav-link {
     padding: 10px 15px;
 }
+
 .sidebar .collapse a {
+    padding-left: 35px;
+}
+
+.sidebar button {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.sidebar button:hover {
+    color: white;
+    background-color: #495057;
+}
+
+a .sidebar .nav-link {
+    padding: 10px 15px;
+}
+
+.sidebar .collapse button {
     padding-left: 35px;
 }

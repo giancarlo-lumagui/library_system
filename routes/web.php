@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\MemberController;
@@ -10,9 +11,15 @@ Route::get('/', function () {
     return view('index');
 });
 
+// dashboard auth
+Route::get('dashboard', function (){
+    return view('dashboard.dashboard');
+})->name('dashboard');
+
 
 // auth routes
-Route::post('/login', [UserController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 // util routes
