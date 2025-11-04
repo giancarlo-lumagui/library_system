@@ -2,7 +2,7 @@
 @vite('resources/css/layouts/sidebar.css')
 
   <div class="sidebar d-flex flex-column p-3">
-    <h4 class="text-white mb-4">My System</h4>
+    <h4 class="text-white mb-4">Library <i>System</i></h4>
 
     <ul class="nav nav-pills flex-column mb-auto">
 
@@ -15,14 +15,28 @@
 
       <!-- Books -->
       <li class="nav-item">
-        <a href="#" class="nav-link text-white">
+        <a href="{{ route('books') }}" class="nav-link text-white">
           <i class="bi bi-book me-2"></i> Books
+        </a>
+      </li>
+
+      <!-- Borrow Books -->
+      <li class="nav-item">
+        <a href="{{ route('borrow') }}" class="nav-link text-white">
+          <i class="bi bi-book-half me-2"></i> Borrow Books
+        </a>
+      </li>
+
+      <!-- Members -->
+      <li class="nav-item">
+        <a href="{{ route('members') }}" class="nav-link text-white">
+          <i class="bi bi-people me-2"></i> Members
         </a>
       </li>
 
       <!-- Users -->
       <li class="nav-item">
-        <a href="#" class="nav-link text-white">
+        <a href="{{ route('users') }}" class="nav-link text-white">
           <i class="bi bi-person me-2"></i> Users
         </a>
       </li>

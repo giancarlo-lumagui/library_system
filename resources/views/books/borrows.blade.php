@@ -21,7 +21,6 @@
                 <th>Borrow Date</th>
                 <th>Return Date</th>
                 <th>Status</th>
-                <th>Actions</th>
             </tr>
         </thead>
         <tbody id="borrowList"></tbody>
