@@ -95,6 +95,7 @@
                             </span>
                             <select class="form-control" name="editRole" id="editRole">
                                 <option value="admin">Admin</option>
+                                <option value="librarian">Librarian</option>
                                 <option value="user">User</option>
                             </select>
                         </div>
