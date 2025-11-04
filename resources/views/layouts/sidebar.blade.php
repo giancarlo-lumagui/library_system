@@ -8,7 +8,7 @@
 
       <!-- Dashboard -->
       <li class="nav-item">
-        <a href="#" class="nav-link text-white">
+        <a href="{{ route('dashboard') }}" class="nav-link text-white">
           <i class="bi bi-speedometer2 me-2"></i> Dashboard
         </a>
       </li>

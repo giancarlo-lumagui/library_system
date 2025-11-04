@@ -5,16 +5,24 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\BorrowController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Borrow;
+use Carbon\Carbon;
 
 Route::get('/', function () {
     return view('index');
 });
 
 // dashboard auth
-Route::get('dashboard', function (){
+Route::get('/dashboard', function () {
     return view('dashboard.dashboard');
-})->name('dashboard');
+});
+
+
+
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
 
 // auth routes
